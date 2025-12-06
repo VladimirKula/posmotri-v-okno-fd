@@ -88,6 +88,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -160,10 +161,6 @@ ol {
   color: #545050;
 }
 
-.content__card-link {
-  text-decoration: none;
-}
-
 .content__video-card-title {
   font-family: "Oswald", sans-serif;
   font-weight: 700;
@@ -174,19 +171,21 @@ ol {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  max-width: 196px;
 }
 
 .content__video-card-description {
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 16px;
+  line-height: 0.9;
   color: #fff;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  max-width: 196px;
 }
 
 /* Cтили форм */
@@ -221,7 +220,6 @@ ol {
   border-top: 1px solid #fff;
   background-color: transparent;
   width: 225px;
-  height: 27px;
   outline: none;
 }
 
@@ -280,29 +278,24 @@ ol {
   align-self: flex-end;
 }
 
-.search-form__submit-button:hover {
+.button:hover {
   text-decoration: underline;
   text-decoration-skip-ink: none;
 }
 
-.search-form__submit-button:active {
+.button:active {
   background: #545050;
   text-decoration: none;
 }
 
-.search-form__submit-button:focus-visible {
+.button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
 
 .more-button {
   width: 100%;
-  height: 100%;
-}
-
-.more-button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
+  min-height: 34px;
 }
 
 /* Cтили ссылок карточек */
@@ -310,6 +303,7 @@ ol {
 .content__card-link {
   display: block;
   outline: none;
+  text-decoration: none;
   cursor: pointer;
 }
 
